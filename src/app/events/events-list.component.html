@@ -1,12 +1,9 @@
 <div class="container pt-5">
-  <h1>Upcoming Angular Events</h1>
+  <h1 (click)="handleToast()">Upcoming Angular Events</h1>
   <hr />
   <div class="row">
     <div *ngFor="let event of events" class="col-md-6 mb-3">
-      <event-thumbnail
-        (click)="handleShowEventName(event.name)"
-        [eventThumbnail]="event"
-      ></event-thumbnail>
+      <event-thumbnail [eventThumbnail]="event"></event-thumbnail>
     </div>
   </div>
 </div>

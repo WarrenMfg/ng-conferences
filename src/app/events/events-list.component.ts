@@ -4,7 +4,6 @@ import { EventService } from './shared/event.service';
 declare let $: any;
 
 @Component({
-  selector: 'events-list',
   templateUrl: './events-list.component.html'
 })
 export class EventsListComponent implements OnInit {
@@ -15,9 +14,9 @@ export class EventsListComponent implements OnInit {
     this.events = this.eventService.getEvents();
   }
 
-  handleShowEventName(eventName: string) {
+  handleToast() {
     const toast = $('.toast');
-    toast.find('#toast-body').text(eventName);
+    toast.find('#toast-body').text('More to come...');
     toast.toast('show');
   }
 }

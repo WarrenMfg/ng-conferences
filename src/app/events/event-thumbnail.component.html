@@ -1,4 +1,4 @@
-<div class="card card-body h-100">
+<div [routerLink]="['/events', eventThumbnail.id]" class="card card-body h-100">
   <h2>{{ eventThumbnail.name }}</h2>
   <div>Date: {{ eventThumbnail.date }}</div>
   <div [ngClass]="getTimeClass()">

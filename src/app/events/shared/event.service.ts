@@ -5,6 +5,10 @@ export class EventService {
   getEvents() {
     return EVENTS;
   }
+
+  getEvent(id: number): any {
+    return EVENTS.find(event => event.id === id);
+  }
 }
 
 const EVENTS = [
@@ -153,7 +157,11 @@ const EVENTS = [
     time: '9:00 am',
     price: 759.0,
     imageUrl: '/assets/images/ng-conf.png',
-    url: 'https://ngconf2037.com',
+    location: {
+      address: 'The Palatial America Hotel',
+      city: 'Salt Lake City',
+      country: 'USA'
+    },
     sessions: [
       {
         id: 1,
