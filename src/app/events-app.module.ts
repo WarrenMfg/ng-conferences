@@ -14,13 +14,15 @@ import { Error404Component } from './errors/404.component';
 
 import { EventService } from './events/shared/event.service';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
+import { EventListResolver } from './events/shared/events-list-resolver.service';
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [
     EventService,
     EventRouteActivator,
-    { provide: 'canDeactivateNewEvent', useValue: checkDirtyState }
+    { provide: 'canDeactivateNewEvent', useValue: checkDirtyState },
+    EventListResolver
   ],
   declarations: [
     EventsAppComponent,
