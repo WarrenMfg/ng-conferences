@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-.hoverwell:hover {
-  background-color: #485563;
+.card {
+  transition: all 0.2s ease;
   cursor: pointer;
+}
+.card:hover {
+  background-color: lightgray;
 }
 
 .pointable {

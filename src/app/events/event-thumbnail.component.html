@@ -1,0 +1,13 @@
+<div class="card card-body">
+  <h2>{{ eventThumbnail.name }}</h2>
+  <div>Date: {{ eventThumbnail.date }}</div>
+  <div>Time: {{ eventThumbnail.time }}</div>
+  <div>Price: ${{ eventThumbnail.price }}</div>
+  <div>
+    <span>Location: {{ eventThumbnail.location.address }}</span>
+    <span class="pad-left"
+      >{{ eventThumbnail.location.city }},
+      {{ eventThumbnail.location.country }}</span
+    >
+  </div>
+</div>

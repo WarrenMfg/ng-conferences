@@ -1,0 +1,11 @@
+.card {
+  color: darkslategrey;
+}
+
+h2 {
+  color: initial;
+}
+
+.pad-left {
+  padding-left: 0.5rem;
+}
