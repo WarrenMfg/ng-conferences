@@ -1,13 +1,23 @@
-<div class="card card-body">
+<div class="card card-body h-100">
   <h2>{{ eventThumbnail.name }}</h2>
   <div>Date: {{ eventThumbnail.date }}</div>
-  <div>Time: {{ eventThumbnail.time }}</div>
+  <div [ngClass]="getTimeClass()">
+    Time: {{ eventThumbnail.time }} -
+    <span [ngSwitch]="eventThumbnail.time">
+      <span *ngSwitchCase="'8:00 am'">early start</span>
+      <span *ngSwitchCase="'9:00 am'">normal start</span>
+      <span *ngSwitchCase="'10:00 am'">late start</span>
+    </span>
+  </div>
   <div>Price: ${{ eventThumbnail.price }}</div>
-  <div>
-    <span>Location: {{ eventThumbnail.location.address }}</span>
+  <div [hidden]="!eventThumbnail.location">
+    <span>Location: {{ eventThumbnail.location?.address }}</span>
     <span class="pad-left"
-      >{{ eventThumbnail.location.city }},
-      {{ eventThumbnail.location.country }}</span
+      >{{ eventThumbnail.location?.city }},
+      {{ eventThumbnail.location?.country }}</span
     >
+  </div>
+  <div [hidden]="!eventThumbnail.url">
+    <span>URL: {{ eventThumbnail.url }}</span>
   </div>
 </div>

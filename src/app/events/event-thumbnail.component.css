@@ -9,3 +9,11 @@ h2 {
 .pad-left {
   padding-left: 0.5rem;
 }
+
+.green {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}

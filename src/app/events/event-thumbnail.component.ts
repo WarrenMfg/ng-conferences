@@ -7,4 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class EventThumbnailComponent {
   @Input() eventThumbnail: any;
+
+  getTimeClass() {
+    const isEarlyStart = this.eventThumbnail.time === '8:00 am';
+    return {
+      green: isEarlyStart,
+      bold: isEarlyStart
+    };
+  }
 }
